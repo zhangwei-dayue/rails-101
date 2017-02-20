@@ -15,7 +15,7 @@ class GroupsController < ApplicationController
     @group = Group.new
   end
 
-  ef create
+  def create
     @group = Group.new(group_params)
 
     if @group.save
@@ -33,7 +33,7 @@ class GroupsController < ApplicationController
       render :edit
     end
   end
-  
+
 
   def destroy
     @group = Group.find(params[:id])
